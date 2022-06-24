@@ -1,0 +1,79 @@
+module.exports=(sequelize,DataTypes)=>{
+    const Employee = sequelize.define("Employee",{
+     
+        employeeIdNumber:{
+            type:DataTypes.STRING,
+            required:true
+        },
+        firstName:{
+            type:DataTypes.STRING,
+            required:true
+        },
+        middleName:{
+            type:DataTypes.STRING,
+            required:true
+        },
+        lastName:{
+            type:DataTypes.STRING,
+            required:true
+        },
+        DOB:{
+            type:DataTypes.DATE,
+            required:true
+        },
+        password:{
+            type:DataTypes.STRING,
+            required:true
+        },
+        email:{
+            type:DataTypes.STRING,
+            required:true
+        },
+        gender:{
+            type:DataTypes.ENUM("MALE","FEMALE"),
+            required:true
+        },
+        phoneNumber:{
+            type:DataTypes.STRING,
+            required:true
+        },
+        address:{
+            type:DataTypes.STRING,
+            required:true,
+        },
+        location:{
+            type:DataTypes.STRING,
+            required:true
+        },
+        salary:{
+            type:DataTypes.DECIMAL(10,2),
+            required:true
+        },
+        DateOfEmployment:{
+            type:DataTypes.DATE,
+            required:true
+        },
+        employmentTerms:{
+            type:DataTypes.STRING,
+            required:true
+        },
+        contractLength:{
+            type:DataTypes.INTEGER,
+            required:true
+        },
+
+        accountStatus:{
+            type:DataTypes.BOOLEAN,
+            required:true,
+            default:false
+        },
+        profileImage:{
+            type:DataTypes.STRING,
+            required:true
+        }
+    
+
+
+    })
+    return Employee;
+}
